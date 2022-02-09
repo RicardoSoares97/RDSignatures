@@ -5,7 +5,7 @@ using System.Xml;
 
 namespace RDSignatures
 {
-    public static class Main
+    public static class RDSignaturesClass
     {
         public static SignedXml SignXmlFileWithCertificate(string xml, X509Certificate2 certRoot, X509Certificate2 certChild, String CanocalizationMethod, String SignatureMethod)
         {

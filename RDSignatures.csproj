@@ -7,10 +7,21 @@
     <Description>Assinatura de XML's com Cartão de Cidadão ou Cartão da Ordem dos Médicos</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <RepositoryUrl>https://github.com/RicardoSoares97/RDSignatures.git</RepositoryUrl>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <Copyright>Library Desenvolvida por Ricardo Soares</Copyright>
+    <PackageReleaseNotes>- Desenvolvimento de um método para obter o certificado assinatura ou autenticação
+- Desenvolvimento de um método para assinar um XML e devolve o objeto SignedXML</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="System.Security.Cryptography.Xml" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
