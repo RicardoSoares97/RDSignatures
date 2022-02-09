@@ -1,13 +1,22 @@
 
 # RDSignatures
 
-Assinatura de XML com Cartão da Ordem e Cartão de Cidadão em C#
+Assinatura de XML's com Cartão da Ordem e Cartão de Cidadão em C#
 
 Possível:
 - Autenticação
 - Assinatura Digital
 
 
+## Instalar
+
+Instalar via NuGet Gallery
+https://www.nuget.org/packages/RDSignatures/1.0.0?_src=template
+
+```bash
+  Install-Package RDSignatures -Version 1.0.0
+```
+    
 ## Como utilizar
 
 1) Primeira Etapa
