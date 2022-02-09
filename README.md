@@ -48,6 +48,5 @@ Exemplo:
 1) E-mail
 - ricardo.18.soares@hotmail.com
 
-2) Redes Sociais
-- @_ricardomanuelsoares (Instagram)
+2) Rede Social
 - https://www.linkedin.com/in/ricardosoares97/ (Linkedin)
