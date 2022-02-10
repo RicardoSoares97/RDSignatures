@@ -11,6 +11,9 @@
     <Copyright>Library Desenvolvida por Ricardo Soares</Copyright>
     <PackageReleaseNotes>- Desenvolvimento de um método para obter o certificado assinatura ou autenticação
 - Desenvolvimento de um método para assinar um XML e devolve o objeto SignedXML</PackageReleaseNotes>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <FileVersion>1.1.0.0</FileVersion>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
