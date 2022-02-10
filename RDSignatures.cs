@@ -52,41 +52,38 @@ namespace RDSignatures
             }
         }
 
-        public static X509Certificate2 ReturnCertificate(Boolean isRoot, Boolean isAuthentication, String nameCertificate)
+        public static X509Certificate2 ReturnCertificate(String nameCertificate)
         {
             try
             {
                 X509Store store = new X509Store(StoreName.My, StoreLocation.CurrentUser);
-
-                if (isRoot)
-                    store = new X509Store(StoreName.CertificateAuthority, StoreLocation.CurrentUser);
-
+                store = new X509Store(StoreName.CertificateAuthority, StoreLocation.CurrentUser);
                 store.Open(OpenFlags.ReadOnly | OpenFlags.OpenExistingOnly);
 
                 foreach (X509Certificate2 certificate in store.Certificates)
                 {
-                    if (isRoot)
-                    {
-                        if (certificate.Subject == nameCertificate)
-                            return certificate;
-                    }
-                    else
-                    {
-                        if (isAuthentication)
-                        {
-                            if ((certificate.SubjectName.Name.Contains(nameCertificate) && certificate.IssuerName.Name.Contains("Autenticação")) || certificate.SubjectName.Name.Contains("[Autenticação] " + nameCertificate))
-                            {
-                                return certificate;
-                            }
-                        }
-                        else
-                        {
-                            if ((certificate.SubjectName.Name.Contains(nameCertificate) && certificate.IssuerName.Name.Contains("Assinatura")) || certificate.SubjectName.Name.Contains("[Assinatura Qualificada] " + nameCertificate))
-                            {
-                                return certificate;
-                            }
-                        }
-                    }
+                    if (certificate.Subject == nameCertificate)
+                        return certificate;
+                }
+
+                return null;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public static X509Certificate2 ReturnCertificate(String prefix, String nameCertificate)
+        {
+            try
+            {
+                X509Store store = new X509Store(StoreName.My, StoreLocation.CurrentUser);
+                store.Open(OpenFlags.ReadOnly | OpenFlags.OpenExistingOnly);
+
+                foreach (X509Certificate2 certificate in store.Certificates)
+                {
+                    if ((certificate.SubjectName.Name.Contains(nameCertificate) && certificate.IssuerName.Name.Contains(prefix)))
+                        return certificate;
                 }
 
                 return null;
