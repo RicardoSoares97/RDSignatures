@@ -77,7 +77,7 @@ Exemplo:
 
 
 ## 🔗 Links
-[![email](https://img.shields.io/badge/email-Ricardo_soares-000?style=for-the-badge&logo=microsoft&logoColor=white)](http://hotmail.com/)
+[![email](https://img.shields.io/badge/email-Ricardo_soares-000?style=for-the-badge&logo=microsoft&logoColor=white)](mailto:ricardo.18.soares@hotmail.com)
 
 [![linkedin](https://img.shields.io/badge/Ricardo_Soares-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ricardosoares97/)
 
